@@ -13,7 +13,6 @@ body {
     color: var(--color-text);
 }
 
-/* Banner */
 .banner {
     position: relative;
     width: 1140px;
@@ -133,7 +132,6 @@ body {
     }
 }
 
-/* Map Container */
 .map-container {
     position: relative;
     width: 100%;
@@ -147,8 +145,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #FFF;
-    z-index: 1;
 }
 
 .content {
@@ -157,13 +153,12 @@ body {
     flex-direction: column;
     align-items: center;
     padding-top: 70px;
-    z-index: 2;
 }
 
 .title {
-    color: var(--color-primary);
+    color: #002359;
     text-align: center;
-    font-family: 'Magistral', -apple-system, Roboto, Helvetica, sans-serif;
+    font-family: 'Magistral', -apple-system, system-ui, sans-serif;
     font-size: 28px;
     font-weight: 500;
     line-height: 130%;
@@ -172,7 +167,7 @@ body {
 }
 
 .subtitle {
-    color: var(--color-text);
+    color: #01193F;
     text-align: center;
     font-family: 'Rubik', sans-serif;
     font-size: 17px;
@@ -182,63 +177,55 @@ body {
 }
 
 .map-image {
-    width: var(--max-width);
+    width: 1140px;
     height: 550px;
     border-radius: 20px;
     border: 1px solid rgba(0, 35, 89, 0.60);
     object-fit: cover;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
+@media (max-width: 991px) {
     .map-container {
         height: auto;
-        padding: 40px 20px;
     }
-
-    .content {
-        padding-top: 40px;
-    }
-
     .title {
         font-size: 24px;
     }
-
     .subtitle {
         font-size: 15px;
     }
-
     .map-image {
-        width: 100%;
-        max-width: 800px;
+        width: 90%;
         height: auto;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+    .map-container {
+        height: auto;
+        padding: 20px 0;
+    }
     .title {
         font-size: 20px;
         padding: 0 20px;
     }
-
     .subtitle {
         font-size: 14px;
         padding: 0 20px;
     }
-
     .map-image {
+        width: 95%;
         border-radius: 10px;
     }
 }
 
 .reviews-container {
-    max-width: var(--max-width);
+    max-width: 1140px;
     margin: 0 auto;
-    padding: 20px;
 }
 
 .reviews-title {
-    color: var(--color-primary);
+    color: #002359;
     text-align: center;
     font-family: 'Magistral', sans-serif;
     font-size: 28px;
@@ -250,27 +237,23 @@ body {
 
 .rating-card {
     width: 225px;
-    height: 70px;
     padding: 12px 27px 14px;
-    margin: 0 auto 45px;
+    margin: 0 auto;
     border-radius: 10px;
     border: 1px solid rgba(0, 35, 89, 0.2);
     background: #FFF;
-    display: flex;
-    justify-content: center;
+    margin-bottom: 35px;
+    position: relative;
 }
 
 .rating-content {
     position: relative;
-    width: 171px;
 }
 
 .avito-logo {
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 26px;
     height: 26px;
+    margin-right: 2px;
 }
 
 .rating-number {
@@ -291,7 +274,8 @@ body {
     top: 4px;
 }
 
-.star, .star-half {
+.star,
+.star-half {
     width: 18px;
     height: 18px;
 }
@@ -302,10 +286,7 @@ body {
     font-family: 'Rubik', sans-serif;
     font-size: 11px;
     font-weight: 400;
-    position: absolute;
-    left: 5px;
-    top: 31px;
-    width: 160px;
+    margin-top: 5px;
 }
 
 .reviews-grid {
@@ -320,27 +301,21 @@ body {
     border-radius: 20px;
     border: 1px solid rgba(0, 35, 89, 0.5);
     background: #FFF;
-    display: flex;
-    flex-direction: column;
 }
 
 .review-header {
     background: #EBEBEB;
     padding: 30px 40px;
-    max-height: 108px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    border-radius: 20px 20px 0 0;
+    height: 108px;
+    border-radius: 20px 20px 0px 0px;
 }
 
 .review-info {
-    display: flex;
-    flex-direction: column;
+    float: left;
 }
 
 .review-name {
-    color: var(--color-primary);
+    color: #002359;
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
     font-weight: 500;
@@ -357,12 +332,18 @@ body {
 }
 
 .review-stars {
+    float: right;
     display: flex;
     gap: 4px;
 }
 
+.review-stars .star {
+    width: 24px;
+    height: 24px;
+}
+
 .review-text {
-    color: var(--color-text);
+    color: #01193F;
     font-family: 'Rubik', sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -370,16 +351,25 @@ body {
     letter-spacing: -0.08px;
     padding: 25px 40px;
     margin-bottom: 20px;
-    flex-grow: 1;
 }
 
-.review-link {
-    color: var(--color-primary);
+.review-link-one {
+    color: #002359;
     font-family: 'Rubik', sans-serif;
     font-size: 15px;
     font-weight: 400;
     line-height: 160%;
-    text-decoration: underline;
+    text-decoration-line: underline;
+    padding: 40px 40px;
+}
+
+.review-link-two {
+    color: #002359;
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 160%;
+    text-decoration-line: underline;
     padding: 0 40px;
 }
 
@@ -389,116 +379,295 @@ body {
     gap: 30px;
 }
 
-.arrow-left, .arrow-right {
+.arrow-left,
+.arrow-right {
     width: 60px;
     height: 60px;
     cursor: pointer;
 }
 
 .arrow-right {
-    background: var(--color-accent);
+    background: #FDB900;
     border-radius: 50%;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
+@media (max-width: 991px) {
     .reviews-container {
         padding: 15px;
     }
-
+    .rating-card {
+        width: 90%;
+    }
     .reviews-grid {
         flex-direction: column;
         align-items: center;
     }
-
     .review-card {
         width: 100%;
         max-width: 555px;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .reviews-title {
         font-size: 24px;
     }
-
-    .rating-card {
-        width: 90%;
-        padding: 10px 15px;
-    }
-
     .review-header {
         padding: 20px;
         height: auto;
-        flex-direction: column;
-        align-items: flex-start;
     }
-
+    .review-info {
+        float: none;
+        margin-bottom: 10px;
+    }
     .review-stars {
-        margin-top: 15px;
+        float: none;
+        margin-top: 10px;
     }
-
     .review-text {
         padding: 20px;
     }
-
     .review-link {
-        padding: 0 20px;
-        margin-bottom: 20px;
+        padding: 20px;
     }
 }
 
-.warehouse {
-    width: 100%;
-    background: #FFF;
-    padding: 70px 0;
-}
-
-.container {
+.warehouse-section {
     max-width: 1140px;
     margin: 0 auto;
-    padding: 0 15px;
-}
-
-.title {
+    font-family: "Rubik", sans-serif;
+  }
+  
+  .warehouse-section__title {
     color: #002359;
     text-align: center;
-    font-family: 'Rubik', sans-serif;
     font-size: 28px;
     font-weight: 500;
     line-height: 130%;
     text-transform: uppercase;
     margin-bottom: 76px;
-}
-
-.content {
+  }
+  
+  .warehouse-section__content {
     display: flex;
     justify-content: space-between;
     gap: 32px;
-}
-
-.text-section {
+  }
+  
+  .warehouse-section__features {
     width: 553px;
-}
-
-.line {
+  }
+  
+  .warehouse-section__divider {
     width: 100%;
     height: 1px;
-    background: rgba(0, 35, 89, 0.30);
-    margin: 40px 0;
-}
-
-.feature {
-    margin: 40px 0;
-}
-
-.icon {
+    background-color: rgba(0, 35, 89, 0.3);
+    border: none;
+  }
+  
+  .warehouse-section__feature {
+    margin: 40px 0px 38px;
+  }
+  
+  .warehouse-section__icon {
     width: 62px;
     height: 62px;
     margin-bottom: 20px;
+  }
+  
+  .warehouse-section__description {
+    color: #01193f;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: -0.08px;
+    margin: 0;
+  }
+  
+  .warehouse-section__image {
+    width: 555px;
+    height: 510px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+  
+  @media (max-width: 991px) {
+    .warehouse-section {
+      padding: 0 20px;
+    }
+  
+    .warehouse-section__content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .warehouse-section__features {
+      width: 100%;
+      max-width: 553px;
+    }
+  
+    .warehouse-section__image {
+      width: 100%;
+      max-width: 555px;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .warehouse-section__title {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+  
+    .warehouse-section__divider {
+      margin: 30px 0;
+    }
+  
+    .warehouse-section__feature {
+      margin: 30px 0;
+    }
+  
+    .warehouse-section__description {
+      font-size: 14px;
+    }
+  }
+
+
+.main-container {
+    background-color: #EBEBEB; 
+    padding: 70px 0 50px 0; 
 }
 
-.description {
+.container {
+    max-width: 1140px;
+    margin: 0 auto; 
+    padding: 30px; 
+}
+
+@media (max-width: 991px) {
+    .container {
+        max-width: 90%; 
+        padding: 20px;
+    }
+    .main-container {
+        padding: 45px 0 35px 0; 
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 15px;
+    }
+    .main-container {
+        padding: 30px 0 20px 0; 
+    }
+}
+
+.warehouse-main-wrapper {
+    background-color: #ffffff; 
+    padding: 80px 0 60px 0;
+
+    font-family: 'Magistral';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.warehouse-inner-container {
+    max-width: 1140px; 
+    margin: 0 auto; 
+    padding: 30px; 
+}
+
+@media (max-width: 991px) {
+    .warehouse-inner-container {
+        max-width: 90%; 
+        padding: 20px;
+    }
+    .warehouse-main-wrapper {
+        padding: 50px 0 40px 0; 
+    }
+}
+
+@media (max-width: 767px) {
+    .warehouse-inner-container {
+        padding: 15px;
+    }
+    .warehouse-main-wrapper {
+        padding: 30px 0 20px 0; 
+    }
+}
+
+@font-face {
+    font-family: 'Magistral';
+    src: url('Magistral-MediumItalic.eot');
+    src: local('Magistral Medium Italic'), local('Magistral-MediumItalic'),
+        url('Magistral-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Magistral-Medium.woff2') format('woff2'),
+        url('fonts/Magistral-Medium.woff') format('woff'),
+        url('fonts/Magistral-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: local('Rubik Regular'), local('Rubik-Regular'),
+        url('fonts/Rubik-Regular.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: local('Rubik Medium'), local('Rubik-Medium'),
+        url('fonts/Rubik-Medium.ttf') format('truetype');
+    src: url();
+}
+
+
+.why-tech-main-wrapper {
+    font-family: 'Magistral', sans-serif; 
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 130%;
+    background-color: #EBEBEB; 
+    padding: 90px 0 70px 0; 
+}
+
+.why-tech-inner-container {
+    max-width: 1140px; 
+    margin: 0 auto; 
+    padding: 30px; 
+}
+
+.why-tech-section {
+    width: 100%;
+}
+
+/* Стили для заголовка */
+.why-tech-title {
+    color: #002359;
+    text-align: center;
+    font-family: 'Magistral', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 130%;
+    text-transform: uppercase;
+    margin-bottom: 66px;
+}
+
+/* Стили для текста */
+.why-tech-text {
+    color: #01193F;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: -0.08px;
+    margin-bottom: 17px;
+}
+
+.why-tech-text span {
     color: #01193F;
     font-family: 'Rubik', sans-serif;
     font-size: 16px;
@@ -507,52 +676,47 @@ body {
     letter-spacing: -0.08px;
 }
 
-.warehouse-image {
-    width: 555px;
-    height: 480px;
-    border-radius: 20px;
-    object-fit: cover;
-}
-
-/* Medium screens */
-@media (max-width: 768px) {
-    .container {
-        padding: 0 20px;
+/* Адаптивность для .why-tech-inner-container */
+@media (max-width: 991px) {
+    .why-tech-inner-container {
+        max-width: 90%; /* Уменьшаем ширину на планшетах */
+        padding: 20px;
     }
-
-    .content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .text-section {
-        width: 100%;
-        max-width: 553px;
-    }
-
-    .warehouse-image {
-        width: 100%;
-        max-width: 555px;
-        height: auto;
+    .why-tech-main-wrapper {
+        padding: 60px 0 50px 0; /* Уменьшаем отступы на планшетах */
     }
 }
 
-/* Small screens */
-@media (max-width: 480px) {
-    .title {
+@media (max-width: 767px) {
+    .why-tech-inner-container {
+        max-width: 95%;
+        padding: 15px;
+    }
+    .why-tech-main-wrapper {
+        padding: 40px 0 30px 0; /* Еще меньше на мобильных */
+    }
+}
+
+/* Адаптивность для заголовка и текста */
+@media (max-width: 991px) {
+    .why-tech-title {
         font-size: 24px;
         margin-bottom: 40px;
     }
-
-    .line {
-        margin: 30px 0;
+    .why-tech-text,
+    .why-tech-text span {
+        font-size: 15px;
     }
+}
 
-    .feature {
-        margin: 30px 0;
+@media (max-width: 767px) {
+    .why-tech-title {
+        font-size: 20px;
+        margin-bottom: 30px;
     }
-
-    .description {
+    .why-tech-text,
+    .why-tech-text span {
         font-size: 14px;
     }
 }
+
